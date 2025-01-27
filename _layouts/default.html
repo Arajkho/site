@@ -17,8 +17,11 @@
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 
-        {% if site.logo %}
-          <img src="https://github.com/Arajkho/site/blob/main/download.jpg" alt="Logo" />
+        
+          {% if site.logo %}
+  <img src="https://raw.githubusercontent.com/Arajkho/site/main/download.jpg" alt="Logo" />
+
+
         {% endif %}
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
