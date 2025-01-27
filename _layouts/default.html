@@ -16,13 +16,16 @@
     <div class="wrapper">
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        {% if site.logo %}
+  <!-- Render the logo if it exists -->
+  <img src="{{ site.logo }}" alt="Site Logo" />
+{% else %}
+  <!-- Render fallback content if no logo is provided -->
+  <p>No logo available</p>
+{% endif %}
 
         
-          {% if site.logo %}
-  <img src="https://raw.githubusercontent.com/Arajkho/site/main/download.jpg" alt="Logo" />
-
-
-        {% endif %}
+        
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
       
