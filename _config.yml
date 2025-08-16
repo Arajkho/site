@@ -12,18 +12,22 @@ logo: "https://raw.githubusercontent.com/Arajkho/site/main/download.jpg"
 markdown: GFM
 
 description: >
-  **Lecturer, Computer Science & Engineering**  
-  *Hailakandi Polytechnic, Assam*  
+  <strong>Lecturer, Computer Science & Engineering</strong><br/>
+  <em>Hailakandi Polytechnic, Assam</em><br/><br/>
 
-  ### Institutional Roles
-  - **Training & Placement Officer (TPO) Incharge**  
-  - **Infosys Springboard SPOC**  
-  - **Scholarship Institutional Nodal Officer**  
+  <h3>Institutional Roles</h3>
+  <ul>
+    <li><strong>Training & Placement Officer (TPO) Incharge</strong></li>
+    <li><strong>Infosys Springboard SPOC</strong></li>
+    <li><strong>Scholarship Institutional Nodal Officer</strong></li>
+  </ul>
 
-  ### Personal Information
-  - Passionate **reader, learner, educator & coder**  
-  - Qualified **GATE CS** (2020, 2023, 2024) with 500+ score  
-  - Strong interest in **academics, research & student mentorship**
+  <h3>Personal Information</h3>
+  <ul>
+    <li>Passionate <strong>reader, learner, educator & coder</strong></li>
+    <li>Qualified <strong>GATE CS</strong> (2020, 2023, 2024) with 500+ score</li>
+    <li>Strong interest in <strong>academics, research & student mentorship</strong></li>
+  </ul>
 
 show_downloads: false
 
