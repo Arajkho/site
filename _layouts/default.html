@@ -5,56 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% seo %}
+    {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     {% include head-custom.html %}
+    <style>
+      /* Ensure page scrolls naturally */
+      html, body {
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Wrapper should expand */
+      .wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        text-align: center;
+        padding: 20px;
+      }
+
+      header img {
+        max-width: 160px;
+        border-radius: 8px;
+        margin: 10px auto;
+        display: block;
+      }
+
+      nav {
+        margin-top: 20px;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      nav ul li {
+        display: inline;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #0366d6;
+      }
+
+      section {
+        flex: 1;
+        padding: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        background: #f5f5f5;
+        margin-top: auto;
+        font-size: 14px;
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <h1>
+          <a href="{{ "/" | absolute_url }}">
+            {{ site.title | default: site.github.repository_name }}
+          </a>
+        </h1>
+
         {% if site.logo %}
-  <!-- Render the logo if it exists -->
-  <img src="{{ site.logo }}" alt="Site Logo" />
-{% else %}
-  <!-- Render fallback content if no logo is provided -->
-  <p>No logo available</p>
-{% endif %}
+          <img src="{{ site.logo }}" alt="Site Logo" />
+        {% endif %}
 
-        
-        
+        <div class="description">
+          {{ site.description | default: site.github.project_tagline }}
+        </div>
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-      
-        {% if site.github.is_project_page %}
-        <p class="view"><a href="#">Completed Courses <small><li>Elements of Multimedia 2021 3rd sem</li></small><small><li><a href="./datastructure.html" style="text-decoration:none;color:black;"> Data Structure using C</li></a></small></a></p>
-        <p class="view"><a href="#">Ongoing Courses <small><li>Elements of Multimedia 2022 odd sem</li></small><li>Internet and Web Tech 2022 5th sem</li></a></p>
-        {% endif %}
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p> 
-        {% endif %}
-       
-        {% if site.show_downloads %}
-        <ul class="downloads">
-          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
-          <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
-        </ul>
-        {% endif %}
+        <!-- Navigation Menu -->
+        <nav>
+          <ul>
+            <li><a href="{{ '/index.html' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/courses.html' | relative_url }}">Courses</a></li>
+            <li><a href="{{ '/tpo.html' | relative_url }}">TPO Information</a></li>
+            <li><a href="{{ '/scholarship.html' | relative_url }}">Scholarship Info</a></li>
+            <li><a href="{{ '/springboard.html' | relative_url }}">Springboard</a></li>
+          </ul>
+        </nav>
       </header>
+
       <section>
-
-      {{ content }}
-
+        {{ content }}
       </section>
+
       <footer>
         {% if site.github.is_project_page %}
-        <p>This website is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+          <p>This website is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
-        <p><small>Developed by Abarnan Rajkhowa @ 2022 . Assam  </small></p>
+        <p><small>Developed by Abarnan Rajkhowa © 2022, Assam</small></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
