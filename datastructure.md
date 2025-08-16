@@ -1,3 +1,9 @@
+ ---
+layout: default
+title: Data Structure
+permalink: /datastructure/
+--- 
+
 ## Class Notice Board
 '''diff
 - [ ] Please join the Online lab Assignment Submission Portal [link](https://onlinegdb.com/classroom/invite/Sd-PIH-y5)
