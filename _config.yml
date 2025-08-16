@@ -25,7 +25,7 @@ author:
 # Navigation links
 nav_links:
   - title: "Home"
-    url: "/index/"
+    url: "/"
   - title: "Notices"
     url: "/notices/"
   - title: "Courses"
