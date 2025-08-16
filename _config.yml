@@ -1,7 +1,7 @@
 title: "Mr. Abarnan Rajkhowa"
 description: "Designation: Lecturer, Computer Science & Engineering | TPO(i/c),Scholarship INO, SpringBoard SPOC | Hailakandi Polytechnic, Assam"
-baseurl: "" 
-url: "https://arajkho.github.io/site" # replace with your site URL
+baseurl: "/site" 
+url: "https://arajkho.github.io" # replace with your site URL
 
 # Logo / Photo
 logo: "https://raw.githubusercontent.com/Arajkho/site/main/download.jpg"
