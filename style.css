@@ -19,4 +19,35 @@
   0% { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
 }
+/* --- Courses Grid Styling --- */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.course-tile {
+  background: #f8f9fa;
+  border: 2px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.course-tile:hover {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* --- Notice Board Styling --- */
+.notice-board {
+  background: #ffdddd;
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 5px;
+}
 
