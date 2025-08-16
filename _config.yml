@@ -1,32 +1,35 @@
-title: "Abarnan Rajkhowa"
-description: "Lecturer in CSE | Sharing notes, projects & courses"
-logo: "/assets/images/logo.png"   # replace with your logo path if available
-theme: minima   # clean default Jekyll theme
-lang: en-US
+title: "Mr. Abarnan Rajkhowa"
+description: "Lecturer, Computer Science & Engineering | Hailakandi Polytechnic, Assam"
+baseurl: "" # leave empty unless site is inside a subfolder
+url: "https://arajkho.github.io" # replace with your site URL
 
-# Author Info
+# Logo / Photo
+logo: "https://raw.githubusercontent.com/Arajkho/site/main/download.jpg"
+
+# Author information
 author:
   name: "Abarnan Rajkhowa"
-  role: "Lecturer in Computer Science & Engineering"
-  location: "Assam, India"
-  email: "your-email@example.com"
+  role: "Lecturer, Computer Science & Engineering"
+  location: "Hailakandi Polytechnic, Assam"
+  email: "your-email@example.com"   # optional
+  github: "Arajkho"
+  linkedin: "your-linkedin-profile" # replace if you want
 
-# Social Links
-github_username: abarnanrajkhowa
-linkedin_username: your-linkedin
-twitter_username: your-twitter
-
-# Navigation Tabs
+# Navigation links
 nav_links:
   - title: "Home"
     url: "/"
+  - title: "Notice"
+    url: "/notice/"
   - title: "Courses"
-    url: "/courses"
-  - title: "Projects"
-    url: "/projects"
+    url: "/courses/"
+  - title: "Research"
+    url: "/research/"
   - title: "Contact"
-    url: "/contact"
+    url: "/contact/"
 
-# Plugins
+# Build settings
+theme: minima
 plugins:
   - jekyll-seo-tag
+  - jekyll-feed
