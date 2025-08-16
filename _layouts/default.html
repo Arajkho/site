@@ -1,109 +1,110 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-    {% seo %}
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <style>
-      body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-      }
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
 
-      .wrapper {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
+    header img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border: 2px solid white;
+    }
 
-      header {
-        padding: 20px;
-        text-align: center;
-        border-bottom: 1px solid #eee;
-      }
+    header div {
+      text-align: left;
+    }
 
-      header h1 {
-        margin: 0;
-        font-size: 28px;
-        color: #0077cc;
-      }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
 
-      header img {
-        max-width: 150px;
-        border-radius: 10px;
-        margin-top: 10px;
-      }
+    header p {
+      margin: 5px 0 0;
+      font-size: 16px;
+    }
 
-      .tabs {
-        margin: 20px 0;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-      }
+    nav {
+      background: #005fa3;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
 
-      .tabs a {
-        padding: 8px 15px;
-        border: 1px solid #0077cc;
-        border-radius: 6px;
-        text-decoration: none;
-        color: #0077cc;
-        font-weight: bold;
-      }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-      .tabs a:hover {
-        background-color: #0077cc;
-        color: white;
-      }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-      section {
-        flex: 1;
-        padding: 20px;
-      }
+    main {
+      flex: 1;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
 
-      footer {
-        background: #f5f5f5;
-        padding: 15px;
-        text-align: center;
-        border-top: 1px solid #ddd;
-      }
-
-      footer small {
-        color: #555;
-      }
-    </style>
-    {% include head-custom.html %}
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        {% if site.logo %}
-          <img src="{{ site.logo }}" alt="Site Logo" />
-        {% endif %}
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-        <div class="tabs">
-          <a href="#">Completed Courses</a>
-          <a href="#">Ongoing Courses</a>
-        </div>
-      </header>
-
-      <section>
-        {{ content }}
-      </section>
-
-      <footer>
-        {% if site.github.is_project_page %}
-        <p>This website is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p><small>Developed by Abarnan Rajkhowa © 2022, Assam</small></p>
-      </footer>
+    footer {
+      background: #f5f5f5;
+      padding: 15px;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="{{ site.logo }}" alt="Logo">
+    <div>
+      <h1>{{ site.title }}</h1>
+      <p>{{ site.author.role }} – {{ site.author.location }}</p>
     </div>
-    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
-  </body>
+  </header>
+
+  <nav>
+    {% for link in site.nav_links %}
+      <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+    {% endfor %}
+  </nav>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>Developed by {{ site.author.name }} © {{ site.time | date: '%Y' }} | Assam</p>
+  </footer>
+</body>
 </html>
