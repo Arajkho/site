@@ -5,11 +5,11 @@ permalink: /datastructure/
 --- 
 
 ## Class Notice Board
-'''diff
+```diff
 - [ ] Please join the Online lab Assignment Submission Portal [link](https://onlinegdb.com/classroom/invite/Sd-PIH-y5)
 - [ ] [25/05/2022] Data structure Assignment 2 uploaded due date is 03/06/2022.
 - [x] Data structure Assignment 1 uploaded due date is 10/05/2022.
-'''
+```
 ## Assignments
 
 - [x] 1.  [Download Assignment-1](https://docs.google.com/document/d/1dcGu4SJntrkmqcHdHaVcniPpmZcdUtI8VA5ltbvdjNE/edit?usp=sharing)
