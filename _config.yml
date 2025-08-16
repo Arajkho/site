@@ -49,8 +49,6 @@ theme: minima
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+markdown: GFM
+
 
