@@ -3,13 +3,12 @@ layout: default
 title: Home
 permalink: /index/
 ---
-# Notice
+# Notice Board
 
+<div class="notice-board">
+  <p>📢 [25/05/2022] Assignment 2 Data Structure uploaded | Assignment 1 already uploaded</p>
+</div>
 
-```diff
-- [25/05/2022] Assignment 2 datastructure uploaded on data structure course page.
-- Assignment 1 datastructure uploaded on data structure course page.
-```
 
 [Go to Data Structure course]({{ "/datastructure/" | relative_url }})
 
