@@ -1,14 +1,36 @@
 theme: jekyll-theme-minimal
 remote_theme: pages-themes/minimal@v0.2.0
+
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme
+  - jekyll-feed   # optional, adds RSS feed support
+
 gem "github-pages", group: :jekyll_plugins
-title: Mr. Abarnan Rajkhowa
-logo: https://raw.githubusercontent.com/Arajkho/site/main/download.jpg
+
+title: "Mr. Abarnan Rajkhowa"
+logo: "https://raw.githubusercontent.com/Arajkho/site/main/download.jpg"
 markdown: GFM
-description: Lecturer  Hailakandi Polytechnic/
-             Computer Science and Engineering/
-             A reader / A learner / an educator / coder /
-             "GATE CS 2020+2023+2024" Qualified with /500+ score
-             
+
+description: >
+  **Lecturer, Computer Science & Engineering**  
+  *Hailakandi Polytechnic, Assam*  
+
+  ### Institutional Roles
+  - **Training & Placement Officer (TPO) Incharge**  
+  - **Infosys Springboard SPOC**  
+  - **Scholarship Institutional Nodal Officer**  
+
+  ### Personal Information
+  - Passionate **reader, learner, educator & coder**  
+  - Qualified **GATE CS** (2020, 2023, 2024) with 500+ score  
+  - Strong interest in **academics, research & student mentorship**
+
 show_downloads: false
+
+# 👇 Navigation menu
+header_pages:
+  - index.md
+  - courses.md
+  - tpo.md
+  - scholarship.md
+  - springboard.md
