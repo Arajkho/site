@@ -1,1 +1,22 @@
+.notice-board {
+  width: 100%;
+  overflow: hidden;
+  background: #ffe5e5;
+  color: red;
+  font-weight: bold;
+  padding: 10px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.notice-board p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
 
