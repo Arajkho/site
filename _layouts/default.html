@@ -7,159 +7,103 @@
 
     {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-    {% include head-custom.html %}
-
     <style>
-      /* --- Layout fixes --- */
-      html, body {
-        height: 100%;
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
         margin: 0;
-        padding: 0;
-        overflow-y: auto; /* allow scroll */
       }
 
       .wrapper {
-        min-height: 100vh;        /* full viewport height */
+        flex: 1;
         display: flex;
         flex-direction: column;
-        width: 100%;
       }
 
       header {
+        padding: 20px;
         text-align: center;
-        padding: 24px 16px;
+        border-bottom: 1px solid #eee;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 28px;
+        color: #0077cc;
       }
 
       header img {
-        max-width: 160px;
-        height: auto;
-        border-radius: 8px;
-        display: block;
-        margin: 10px auto 0;
+        max-width: 150px;
+        border-radius: 10px;
+        margin-top: 10px;
       }
 
-      .description {
-        margin-top: 12px;
-      }
-
-      /* --- Navigation --- */
-      nav {
-        margin-top: 18px;
-      }
-      nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+      .tabs {
+        margin: 20px 0;
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 14px;
+        gap: 15px;
       }
-      nav li { display: inline-flex; }
-      nav a {
+
+      .tabs a {
+        padding: 8px 15px;
+        border: 1px solid #0077cc;
+        border-radius: 6px;
         text-decoration: none;
-        padding: 8px 12px;
-        border-radius: 8px;
-        font-weight: 600;
-        border: 1px solid #e5e7eb;
-        color: #0366d6;
-        background: #fff;
-      }
-      nav a:hover {
-        background: #f6f8fa;
-      }
-      nav a.active {
-        border-color: #0366d6;
-        background: #eef6ff;
+        color: #0077cc;
+        font-weight: bold;
       }
 
-      /* --- Main content --- */
-      main {
-        flex: 1 0 auto;           /* grow to push footer down */
-        padding: 24px 16px;
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
+      .tabs a:hover {
+        background-color: #0077cc;
+        color: white;
       }
 
-      /* --- Footer --- */
+      section {
+        flex: 1;
+        padding: 20px;
+      }
+
       footer {
-        flex-shrink: 0;
-        position: static !important; /* override any fixed/abs from theme */
+        background: #f5f5f5;
+        padding: 15px;
         text-align: center;
-        padding: 16px;
-        background: #f7f7f7;
-        border-top: 1px solid #eaeaea;
-        font-size: 14px;
+        border-top: 1px solid #ddd;
       }
 
-      /* --- Small screens --- */
-      @media (max-width: 480px) {
-        nav a { padding: 8px 10px; font-size: 14px; }
+      footer small {
+        color: #555;
       }
     </style>
+    {% include head-custom.html %}
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1>
-          <a href="{{ '/' | absolute_url }}">
-            {{ site.title | default: site.github.repository_name }}
-          </a>
-        </h1>
-
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
         {% if site.logo %}
           <img src="{{ site.logo }}" alt="Site Logo" />
         {% endif %}
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-        <div class="description">
-          {{ site.description | default: site.github.project_tagline }}
+        <div class="tabs">
+          <a href="#">Completed Courses</a>
+          <a href="#">Ongoing Courses</a>
         </div>
-
-        <!-- Navigation: built from header_pages in _config.yml -->
-        <nav>
-          <ul>
-            {% assign current = page.url | relative_url %}
-            {% if site.header_pages %}
-              {% for path in site.header_pages %}
-                {% assign p = site.pages | where: "path", path | first %}
-                {% if p %}
-                  <li>
-                    <a
-                      href="{{ p.url | relative_url }}"
-                      class="{% if current == p.url | relative_url %}active{% endif %}">
-                      {{ p.title | default: p.name | split: '.' | first | capitalize }}
-                    </a>
-                  </li>
-                {% endif %}
-              {% endfor %}
-            {% else %}
-              <!-- Fallback links if header_pages not set -->
-              <li><a href="{{ '/index.html' | relative_url }}" class="{% if current == '/index.html' %}active{% endif %}">Home</a></li>
-              <li><a href="{{ '/courses.html' | relative_url }}" class="{% if current == '/courses.html' %}active{% endif %}">Courses</a></li>
-              <li><a href="{{ '/tpo.html' | relative_url }}" class="{% if current == '/tpo.html' %}active{% endif %}">TPO Information</a></li>
-              <li><a href="{{ '/scholarship.html' | relative_url }}" class="{% if current == '/scholarship.html' %}active{% endif %}">Scholarship Info</a></li>
-              <li><a href="{{ '/springboard.html' | relative_url }}" class="{% if current == '/springboard.html' %}active{% endif %}">Springboard</a></li>
-            {% endif %}
-          </ul>
-        </nav>
       </header>
 
-      <main>
+      <section>
         {{ content }}
-      </main>
+      </section>
 
       <footer>
         {% if site.github.is_project_page %}
-          <p>This website is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        <p>This website is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
         <p><small>Developed by Abarnan Rajkhowa © 2022, Assam</small></p>
       </footer>
     </div>
-
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
   </body>
 </html>
