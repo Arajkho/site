@@ -1,40 +1,32 @@
-theme: jekyll-theme-minimal
-remote_theme: pages-themes/minimal@v0.2.0
+title: "Abarnan Rajkhowa"
+description: "Lecturer in CSE | Sharing notes, projects & courses"
+logo: "/assets/images/logo.png"   # replace with your logo path if available
+theme: minima   # clean default Jekyll theme
+lang: en-US
 
+# Author Info
+author:
+  name: "Abarnan Rajkhowa"
+  role: "Lecturer in Computer Science & Engineering"
+  location: "Assam, India"
+  email: "your-email@example.com"
+
+# Social Links
+github_username: abarnanrajkhowa
+linkedin_username: your-linkedin
+twitter_username: your-twitter
+
+# Navigation Tabs
+nav_links:
+  - title: "Home"
+    url: "/"
+  - title: "Courses"
+    url: "/courses"
+  - title: "Projects"
+    url: "/projects"
+  - title: "Contact"
+    url: "/contact"
+
+# Plugins
 plugins:
-  - jekyll-remote-theme
-  - jekyll-feed   # optional, adds RSS feed support
-
-gem "github-pages", group: :jekyll_plugins
-
-title: "Mr. Abarnan Rajkhowa"
-logo: "https://raw.githubusercontent.com/Arajkho/site/main/download.jpg"
-markdown: GFM
-
-description: >
-  <strong>Lecturer, Computer Science & Engineering</strong><br/>
-  <em>Hailakandi Polytechnic, Assam</em><br/><br/>
-
-  <h3>Institutional Roles</h3>
-  <ul>
-    <li><strong>Training & Placement Officer (TPO) Incharge</strong></li>
-    <li><strong>Infosys Springboard SPOC</strong></li>
-    <li><strong>Scholarship Institutional Nodal Officer</strong></li>
-  </ul>
-
-  <h3>Personal Information</h3>
-  <ul>
-    <li>Passionate <strong>reader, learner, educator & coder</strong></li>
-    <li>Qualified <strong>GATE CS</strong> (2020, 2023, 2024) with 500+ score</li>
-    <li>Strong interest in <strong>academics, research & student mentorship</strong></li>
-  </ul>
-
-show_downloads: false
-
-# 👇 Navigation menu
-header_pages:
-  - index.md
-  - courses.md
-  - tpo.md
-  - scholarship.md
-  - springboard.md
+  - jekyll-seo-tag
