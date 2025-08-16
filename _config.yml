@@ -1,6 +1,6 @@
 title: "Mr. Abarnan Rajkhowa"
 description: "Lecturer, Computer Science & Engineering | Hailakandi Polytechnic, Assam"
-baseurl: "" # leave empty unless site is inside a subfolder
+baseurl: "" 
 url: "https://arajkho.github.io" # replace with your site URL
 
 # Logo / Photo
@@ -11,20 +11,35 @@ author:
   name: "Abarnan Rajkhowa"
   role: "Lecturer, Computer Science & Engineering"
   location: "Hailakandi Polytechnic, Assam"
-  email: "your-email@example.com"   # optional
-  github: "Arajkho"
-  linkedin: "your-linkedin-profile" # replace if you want
+  about: |
+    ### Institutional Roles
+    - Training & Placement Officer (TPO) Incharge  
+    - Infosys Springboard SPOC  
+    - Scholarship Institutional Nodal Officer  
+
+    ### Personal Information
+    - Passionate reader, learner, educator & coder  
+    - Qualified GATE CS (2020, 2023, 2024) with 500+ score  
+    - Strong interest in academics, research & student mentorship  
 
 # Navigation links
 nav_links:
   - title: "Home"
-    url: "/"
-  - title: "Notice"
-    url: "/notice/"
+    url: "/index.md"
+  - title: "Notices"
+    url: "/notices/"
   - title: "Courses"
     url: "/courses/"
+  - title: "TPO Desk"
+    url: "/tpo/"
+  - title: "Scholarship Information"
+    url: "/scholarship/"
+  - title: "Springboard SPOC"
+    url: "/springboard/"
   - title: "Research"
     url: "/research/"
+  - title: "About"
+    url: "/about/"
   - title: "Contact"
     url: "/contact/"
 
