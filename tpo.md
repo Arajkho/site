@@ -50,106 +50,23 @@ permalink: /tpo/
 ## 📊 Placement Records
 
 
-<!-- 📊 Placement Records Widget -->
-<section id="placement-records" class="placement-section">
-  <h2>📈 Placement Records</h2>
- <div class="placement-card">
-    <canvas id="placementChart" aria-label="Placement records chart" role="img"></canvas>
-    <div class="placement-total">
-      <div class="total-number" id="totalCount">+0</div>
-      <div class="total-label">placed so far</div>
-    </div>
-  </div>
-</section>
-<style>
-.placement-section { max-width: 900px; margin: 24px auto; padding: 10px; }
-.placement-section h2 { margin-bottom: 12px; color:#0b5cff; }
 
-.placement-card {
-  display: grid;
-  grid-template-columns: 1fr 200px;
-  gap: 18px;
-  align-items: center;
-  background: #ffffff;
-  border: 1px solid #e6e9ef;
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(8,20,50,0.04);
-}
-#placementChart { width: 100% !important; height: 260px !important; }
 
-.placement-total { text-align: center; padding: 12px; border-left: 1px dashed #eee; }
-.total-number { font-size: 36px; font-weight: 700; color: #1b5cff; }
-.total-label { font-size: 13px; color: #666; margin-top: 6px; }
+## Year-wise Placement Records
 
-@media (max-width:720px) {
-  .placement-card { grid-template-columns: 1fr; }
-  .placement-total { border-left: none; border-top: 1px dashed #eee; margin-top: 8px; }
-}
-</style>
+| Year | Students Placed | Bar Chart                  |
+|------|-----------------|----------------------------|
+| 2023 | 13              | █████████                 |
+| 2024 | 34              | ████████████████████████  |
+| 2025 | 18              | ████████████              |
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+**Total Students Placed: 65 +**
 
-<script>
-const placementData = {
-  labels: ['2023', '2024', '2025'],
-  values: [18, 34, 18]
-};
-const totalPlaced = placementData.values.reduce((a,b)=>a+b, 0);
-
-document.addEventListener('DOMContentLoaded', function () {
-  const ctx = document.getElementById('placementChart').getContext('2d');
-  const grad = ctx.createLinearGradient(0,0,0,300);
-  grad.addColorStop(0, 'rgba(27,92,255,0.85)');
-  grad.addColorStop(1, 'rgba(27,92,255,0.35)');
-
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: placementData.labels,
-      datasets: [{
-        label: 'Students Placed',
-        data: placementData.values,
-        backgroundColor: grad,
-        borderRadius: 8,
-        barThickness: 40
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { grid: { display: false } },
-        y: { beginAtZero: true, ticks: { stepSize: 5 } }
-      }
-    }
-  });
-
-  const totalEl = document.getElementById('totalCount');
-  animateCountUp(totalEl, totalPlaced, 900);
-});
-
-function animateCountUp(el, target, duration=800) {
-  const start = 0;
-  const range = target - start;
-  const startTime = performance.now();
-  function step(now) {
-    const elapsed = now - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    const value = Math.floor(start + range * progress);
-    el.textContent = '+' + value;
-    if (progress < 1) requestAnimationFrame(step);
-    else el.textContent = '+' + target;
-  }
-  requestAnimationFrame(step);
-}
-</script>
 
 
 ## Internship Opportunities
-- Assam Power Development Corp – IT Internship  
-- NIC Assam – Software Development Internship  
+- APDCL,NIC,AMTRON – IT Internship  
+-   
 
 ## Industry / Field Visits
 - Oil India Ltd. – Field Visit (2025)  
